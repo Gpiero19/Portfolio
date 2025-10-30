@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Abstract code background",
+      "imageUrl": "https://images.unsplash.com/photo-1760548425298-22aa4b60fc16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzYxNzQ5NTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "project-2",
+      "description": "Modern architecture",
+      "imageUrl": "https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYxODMzNTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "project-3",
+      "description": "Circuit board",
+      "imageUrl": "https://images.unsplash.com/photo-1562408590-e32931084e23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "project-4",
+      "description": "Desk with laptop",
+      "imageUrl": "https://images.unsplash.com/photo-1625297672303-64bf96394e10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkZXNrJTIwbGFwdG9wfGVufDB8fHx8MTc2MTc5MjM1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desk laptop"
+    },
+    {
+      "id": "project-5",
+      "description": "Server room",
+      "imageUrl": "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VydmVyJTIwcm9vbXxlbnwwfHx8fDE3NjE4MDYyNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "server room"
+    },
+    {
+      "id": "project-6",
+      "description": "Cityscape at night",
+      "imageUrl": "https://images.unsplash.com/photo-1519010470956-6d877008eaa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXR5c2NhcGUlMjBuaWdodHxlbnwwfHx8fDE3NjE4MjU0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cityscape night"
+    }
+  ]
 }
