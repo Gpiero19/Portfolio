@@ -3,119 +3,93 @@
 import * as React from "react";
 import { projects as allProjects } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import type { Project, ProjectStatus } from "@/lib/types";
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Mail, Code, Palette, Server } from "lucide-react";
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
-  const [projects, setProjects] = React.useState<Project[]>(allProjects);
-  const [statusFilter, setStatusFilter] = React.useState<ProjectStatus | "all">(
-    "all"
-  );
-  const [techFilter, setTechFilter] = React.useState<string>("all");
-  const [sortOrder, setSortOrder] = React.useState<"newest" | "oldest">(
-    "newest"
-  );
-
-  const technologies = React.useMemo(() => {
-    const allTechs = allProjects.flatMap((p) => p.technologies);
-    return [...new Set(allTechs)].sort();
-  }, []);
-
-  React.useEffect(() => {
-    let filtered = allProjects;
-
-    if (statusFilter !== "all") {
-      filtered = filtered.filter((p) => p.status === statusFilter);
-    }
-
-    if (techFilter !== "all") {
-      filtered = filtered.filter((p) => p.technologies.includes(techFilter));
-    }
-
-    const sorted = [...filtered].sort((a, b) => {
-      const dateA = new Date(a.date).getTime();
-      const dateB = new Date(b.date).getTime();
-      return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
-    });
-
-    setProjects(sorted);
-  }, [statusFilter, techFilter, sortOrder]);
+  const [projects, setProjects] = React.useState(allProjects.slice(0, 4));
 
   return (
-    <div className="container mx-auto px-4 py-8 sm:py-12">
-      <header className="mb-12 text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
-          Developer Project Showcase
+    <div className="container mx-auto px-4">
+      {/* Hero Section */}
+      <section id="home" className="flex flex-col items-center justify-center min-h-screen text-center py-20">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-headline tracking-tighter">
+          <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+            Jane Doe
+          </span>
         </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-          Welcome to my launchpad. Explore my journey from concept to
-          completion, with real-time project statuses and tech stacks.
+        <p className="mt-4 text-xl md:text-2xl font-light text-foreground/80">
+          Creative Developer
         </p>
-      </header>
+        <p className="mt-8 max-w-2xl text-base md:text-lg text-foreground/60">
+          I build beautiful and reliable web applications from front to back.
+          Passionate about clean code, delightful user experiences, and solving complex problems.
+        </p>
+        <a href="#about" className="mt-12">
+          <div className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
+            <ArrowDown className="animate-bounce" />
+            <span>Scroll to explore</span>
+          </div>
+        </a>
+      </section>
 
-      <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <Select
-          onValueChange={(value) => setStatusFilter(value as ProjectStatus | "all")}
-          defaultValue="all"
-        >
-          <SelectTrigger className="w-full sm:w-[180px]">
-            <SelectValue placeholder="Filter by status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Statuses</SelectItem>
-            <SelectItem value="Completed">Completed</SelectItem>
-            <SelectItem value="In Development">In Development</SelectItem>
-            <SelectItem value="On Hold">On Hold</SelectItem>
-          </SelectContent>
-        </Select>
-
-        <Select
-          onValueChange={(value) => setTechFilter(value)}
-          defaultValue="all"
-        >
-          <SelectTrigger className="w-full sm:w-[180px]">
-            <SelectValue placeholder="Filter by technology" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Technologies</SelectItem>
-            {technologies.map((tech) => (
-              <SelectItem key={tech} value={tech}>
-                {tech}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-
-        <Select
-          onValueChange={(value) => setSortOrder(value as "newest" | "oldest")}
-          defaultValue="newest"
-        >
-          <SelectTrigger className="w-full sm:w-[180px]">
-            <SelectValue placeholder="Sort by" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="newest">Newest First</SelectItem>
-            <SelectItem value="oldest">Oldest First</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-      {projects.length === 0 && (
-        <div className="text-center col-span-full py-16">
-          <p className="text-muted-foreground">No projects match the current filters.</p>
+      {/* About / Services Section */}
+      <section id="about" className="py-24">
+        <div className="text-center">
+          <h2 className="text-4xl font-headline font-bold">About Me</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-foreground/70">
+            I am a full-stack developer with a passion for creating modern and performant web experiences. With a background in both design and engineering, I bridge the gap between aesthetics and functionality.
+          </p>
         </div>
-      )}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="border border-border/50 rounded-lg p-8">
+            <Palette className="mx-auto h-10 w-10 text-primary mb-4" />
+            <h3 className="text-xl font-bold font-headline">UI/UX Design</h3>
+            <p className="mt-2 text-foreground/60">Crafting intuitive and beautiful user interfaces.</p>
+          </div>
+          <div className="border border-border/50 rounded-lg p-8">
+            <Code className="mx-auto h-10 w-10 text-primary mb-4" />
+            <h3 className="text-xl font-bold font-headline">Frontend Dev</h3>
+            <p className="mt-2 text-foreground/60">Building responsive and interactive web applications.</p>
+          </div>
+          <div className="border border-border/50 rounded-lg p-8">
+            <Server className="mx-auto h-10 w-10 text-primary mb-4" />
+            <h3 className="text-xl font-bold font-headline">Backend Dev</h3>
+            <p className="mt-2 text-foreground/60">Designing robust and scalable server-side solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-24">
+        <div className="text-center">
+          <h2 className="text-4xl font-headline font-bold">Featured Projects</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-foreground/70">
+            Here are a few projects I've worked on recently. Want to see more? Just ask.
+          </p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-primary">
+            Get in Touch
+          </h2>
+          <p className="mt-4 text-lg text-foreground/80">
+            Have a project in mind, a question, or just want to say hi? I'd love to hear from you.
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto mt-12">
+          <ContactForm />
+        </div>
+      </section>
     </div>
   );
 }
