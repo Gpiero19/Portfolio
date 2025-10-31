@@ -6,8 +6,8 @@ import SiteHeader from '@/components/site-header';
 import SiteFooter from '@/components/site-footer';
 
 export const metadata: Metadata = {
-  title: 'Jane Doe - Creative Developer',
-  description: 'Portfolio of Jane Doe, a creative full-stack developer.',
+  title: 'Gian Piero Canevari - Software Developer',
+  description: 'Portfolio of Gian Piero Canevari, a software developer based in Copenhagen.',
 };
 
 export default function RootLayout({

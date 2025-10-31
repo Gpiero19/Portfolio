@@ -4,7 +4,7 @@ import * as React from "react";
 import { projects as allProjects } from "@/lib/data";
 import { ProjectCard } from "@/components/project-card";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Code, Palette, Server } from "lucide-react";
+import { ArrowDown, Code, Server, Wrench } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
@@ -16,15 +16,14 @@ export default function Home() {
       <section id="home" className="flex flex-col items-center justify-center min-h-screen text-center py-20">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-headline tracking-tighter">
           <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-            Jane Doe
+            Gian Piero Canevari
           </span>
         </h1>
         <p className="mt-4 text-xl md:text-2xl font-light text-foreground/80">
-          Creative Developer
+          Software Developer
         </p>
         <p className="mt-8 max-w-2xl text-base md:text-lg text-foreground/60">
-          I build beautiful and reliable web applications from front to back.
-          Passionate about clean code, delightful user experiences, and solving complex problems.
+          Software Developer with a passion for building user-focused applications and solving problems through code. Fast learner and motivated to grow within collaborative, high-impact teams.
         </p>
         <a href="#about" className="mt-12">
           <div className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
@@ -34,29 +33,29 @@ export default function Home() {
         </a>
       </section>
 
-      {/* About / Services Section */}
+      {/* About / Skills Section */}
       <section id="about" className="py-24">
         <div className="text-center">
           <h2 className="text-4xl font-headline font-bold">About Me</h2>
           <p className="mt-4 max-w-3xl mx-auto text-foreground/70">
-            I am a full-stack developer with a passion for creating modern and performant web experiences. With a background in both design and engineering, I bridge the gap between aesthetics and functionality.
+            Passionate about technology and continuous learning. My early interest in games and tech sparked my curiosity to explore software development. I thrive in collaborative environments, value attention to detail, and bring discipline and resilience from my background in sports.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="border border-border/50 rounded-lg p-8">
-            <Palette className="mx-auto h-10 w-10 text-primary mb-4" />
-            <h3 className="text-xl font-bold font-headline">UI/UX Design</h3>
-            <p className="mt-2 text-foreground/60">Crafting intuitive and beautiful user interfaces.</p>
-          </div>
-          <div className="border border-border/50 rounded-lg p-8">
             <Code className="mx-auto h-10 w-10 text-primary mb-4" />
-            <h3 className="text-xl font-bold font-headline">Frontend Dev</h3>
-            <p className="mt-2 text-foreground/60">Building responsive and interactive web applications.</p>
+            <h3 className="text-xl font-bold font-headline">Languages</h3>
+            <p className="mt-2 text-foreground/60">Python, JavaScript, SQL</p>
           </div>
           <div className="border border-border/50 rounded-lg p-8">
             <Server className="mx-auto h-10 w-10 text-primary mb-4" />
-            <h3 className="text-xl font-bold font-headline">Backend Dev</h3>
-            <p className="mt-2 text-foreground/60">Designing robust and scalable server-side solutions.</p>
+            <h3 className="text-xl font-bold font-headline">Frameworks</h3>
+            <p className="mt-2 text-foreground/60">Django, React, Node.js</p>
+          </div>
+          <div className="border border-border/50 rounded-lg p-8">
+            <Wrench className="mx-auto h-10 w-10 text-primary mb-4" />
+            <h3 className="text-xl font-bold font-headline">Tools</h3>
+            <p className="mt-2 text-foreground/60">Git/GitHub, Docker, Power BI, Google Analytics</p>
           </div>
         </div>
       </section>
@@ -66,7 +65,7 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-4xl font-headline font-bold">Featured Projects</h2>
           <p className="mt-4 max-w-3xl mx-auto text-foreground/70">
-            Here are a few projects I've worked on recently. Want to see more? Just ask.
+            Here are a few projects I've worked on recently.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">

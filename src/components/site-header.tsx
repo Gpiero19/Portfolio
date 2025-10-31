@@ -29,7 +29,7 @@ export default function SiteHeader() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Rocket className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline sm:inline-block text-lg">
-            JD
+            GPC
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
@@ -59,7 +59,7 @@ export default function SiteHeader() {
                 <div className="flex flex-col space-y-4 pt-6">
                   <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setMenuOpen(false)}>
                     <Rocket className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">Jane Doe</span>
+                    <span className="font-bold font-headline">Gian Piero Canevari</span>
                   </Link>
                   <nav className="flex flex-col space-y-2">
                     {navLinks.map((link) => (
