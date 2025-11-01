@@ -28,7 +28,7 @@ export const projects: Project[] = [
     id: "proj-2",
     title: "Banking API",
     description: "A terminal-based banking application with secure transaction processing.",
-    longDescription: "Built a terminal-based banking application with error handling, unit testing, and secure transaction processing. Applied Python (OOP), SQL, Django, and virtual environments for dependency management.",
+    longDescription: "Built a tewrminal-based banking application with error handling, unit testing, and secure transaction processing. Applied Python (OOP), SQL, Django, and virtual environments for dependency management.",
     ...findImage("project-5"), // Re-using an existing image
     status: "Completed",
     technologies: ["Python", "Django", "SQL"],
@@ -44,15 +44,5 @@ export const projects: Project[] = [
     status: "Completed",
     technologies: ["WordPress", "SEO", "Client Communication"],
     date: "2025-01-01",
-  },
-    {
-    id: "proj-4",
-    title: "Pricing Logic Tool Support",
-    description: "Analyzed regional pricing data to support a pricing logic tool.",
-    longDescription: "Analyzed regional pricing data to support the development of a pricing logic tool tailored to local markets. Used Google Analytics to assess user behavior and inform content improvements across European markets. Built and maintained a structured database of historical sales quotes and reports, enabling trend analysis and data-driven decisions.",
-    ...findImage("project-2"),
-    status: "Completed",
-    technologies: ["Data Analysis", "Google Analytics", "Process Optimization"],
-    date: "2023-01-01",
   },
 ];
