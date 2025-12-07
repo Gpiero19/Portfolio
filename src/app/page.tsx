@@ -23,7 +23,9 @@ export default function Home() {
           Software Developer
         </p>
         <p className="mt-8 max-w-2xl text-base md:text-lg text-foreground/60">
-          Software Developer with a passion for building user-focused applications and solving problems through code. Fast learner and motivated to grow within collaborative, high-impact teams.
+          Software Developer specializing in the MERN-adjacent stack (React & Node.js). I leverage my background in Industrial Engineering to approach problem-solving with a focus on system integrity, clean architecture, and measurable results. 
+          <br/> 
+          Fast learner and motivated to build user-focused applications and contribute immediately within collaborative, high-impact teams.
         </p>
         <a href="#about" className="mt-12">
           <div className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
@@ -38,7 +40,9 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-4xl font-headline font-bold">About Me</h2>
           <p className="mt-4 max-w-3xl mx-auto text-foreground/70">
-            Passionate about technology and continuous learning. My early interest in games and tech sparked my curiosity to explore software development. I thrive in collaborative environments, value attention to detail, and bring discipline and resilience from my background in sports.
+            I am Gian Piero Canevari, a Software Developer based in Copenhagen. My early interest in games and technology sparked my curiosity to explore software development, leading to a deliberate career transition over the last three years.
+            <br/>
+            My transition was guided by the discipline and resilience honed through my background in sports, enabling me to be a fast and continuous learner.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -55,7 +59,7 @@ export default function Home() {
           <div className="border border-border/50 rounded-lg p-8">
             <Wrench className="mx-auto h-10 w-10 text-primary mb-4" />
             <h3 className="text-xl font-bold font-headline">Tools</h3>
-            <p className="mt-2 text-foreground/60">Git/GitHub, Docker, Power BI, Google Analytics</p>
+            <p className="mt-2 text-foreground/60">Git/GitHub, Docker, Postman, Power BI, Google Analytics</p>
           </div>
         </div>
       </section>

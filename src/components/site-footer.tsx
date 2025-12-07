@@ -17,7 +17,7 @@ export default function SiteFooter() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground text-center">
-              &copy; {currentYear} Gian Piero Canevari. All rights reserved.
+              &copy; {currentYear} Made with love by Gian Piero Canevari. All rights reserved.
             </p>
             <div className="flex gap-1">
               <Button variant="ghost" size="icon" asChild>
